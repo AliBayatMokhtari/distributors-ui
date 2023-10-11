@@ -7,13 +7,20 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 
-import { createVuetify } from 'vuetify'
+import { createVuetify, type VuetifyOptions } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
+import theme from './plugins/vuetify/theme'
 
 const app = createApp(App)
 
 const vuetify = createVuetify({
+  locale: {
+    locale: 'fa',
+    fallback: 'fa',
+    rtl: { fa: true },
+  },
+  theme,
   components,
   directives,
   icons: {

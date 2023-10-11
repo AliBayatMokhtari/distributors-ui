@@ -10,5 +10,13 @@
     {
       "path": "./tsconfig.vitest.json"
     }
-  ]
+  ],
+  "include": [
+    "vite.config.*",
+    "env.d.ts",
+    "src/**/*",
+    "src/**/*.vue",
+    "themeConfig.ts"
+  ],
+  "exclude": ["dist", "node_modules"]
 }
